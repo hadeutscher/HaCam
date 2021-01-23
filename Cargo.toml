@@ -1,0 +1,18 @@
+[package]
+name = "hacam"
+version = "0.1.0"
+authors = ["Yuval Deutscher <ha@deut.sh>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+com = {version="0.3.0", features=["production"], path="../com-rs/"}
+winapi = {version="0.3.9", features=["ntdef", "minwindef", "strmif", "combaseapi", "objbase", "uuids", "winnt"], path="../winapi-rs/"}
+windows = "0.2.1"
+
+[build-dependencies]
+windows = "0.2.1"
+
+[lib]
+crate-type = ["cdylib"]
